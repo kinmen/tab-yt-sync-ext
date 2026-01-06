@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+  "name": "Ultimate Guitar Player Sync",
+  "version": "1.0",
+  "description": "Adds an embed youtube player with sync'ed playback with Ultimate Guitar or Songsterr",
+  "icons": {},
+  "permissions": [
+    "activeTab"
+  ],
+  "page_action": {
+    "show_matches": [
+      "*://tabs.ultimate-guitar.com/*",
+      "*://www.songsterr.com/*"
+    ],
+    "default_title": "Embed youtube in UG",
+    "default_popup": "popup/ug_yt.html"
+  }
+}
