@@ -57,7 +57,23 @@
 
   function onPlayerReady(event) {
     console.log('on playerready ', event);
-    // event.target.playVideo();
+    const vid = event.target.options.videoId;
+    const title = event.target.videoTitle;
+    console.log('id, title', vid, title);
+    const getHist = browser.storage.local.get('history');
+    getHist.then(res => {
+      let hist = res.history;
+      console.log('hist', hist);
+      
+      if (!(hist)) {
+        hist = {};
+      }
+
+      if (!(vid in hist)) {
+        hist[vid] = title;
+        browser.storage.local.set({history: hist});
+      }
+    });
   }
 
   function onPlayerStateChange(event) {

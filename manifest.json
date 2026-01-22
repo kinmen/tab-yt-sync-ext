@@ -5,7 +5,8 @@
   "description": "Adds an embed youtube player with sync'ed playback with Ultimate Guitar or Songsterr",
   "icons": {},
   "permissions": [
-    "activeTab"
+    "activeTab",
+    "storage"
   ],
   "page_action": {
     "show_matches": [

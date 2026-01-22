@@ -3,14 +3,17 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="ug_yt.css" />
   </head>
 
 <body>
   <form id="ug-yt-form">
     <label for="yt-id">Youtube Video ID:</label>
-    <input type="text" id="yt-id" name="yt-id">
-    <input type="submit" value="Submit">
+    <input id="yt-id" type="text" name="yt-id" list="yt-id-hist"> <button id="dropdown-toggle">&#9660;</button>
+    <datalist id="yt-id-hist"></datalist>
+    <input id='yt-id-submit' type="submit" value="Submit">
   </form>
+  <div id="yt-id-hist-dropdown"></div>
   <script src="ug_yt_popup.js"></script>
 </body>
 
